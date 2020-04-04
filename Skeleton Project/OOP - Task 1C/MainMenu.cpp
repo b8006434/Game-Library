@@ -33,7 +33,7 @@ bool MainMenu::HandleChoice(char choice)
 		if (app->IsUserLoggedIn())
 		{
 			std::string answer = Question("Are you sure?");
-			if (answer == "y" || answer == "Y")
+			if (answer == "Y")
 			{
 				app->LogoutUser();
 			}

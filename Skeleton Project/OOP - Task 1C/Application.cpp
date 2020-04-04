@@ -139,7 +139,7 @@ void Application::Load()
 			getline(myfile, line);
 			gam1.setDescription(line);
 			getline(myfile, line);
-			gam1.setCost(stoi(line));
+			gam1.setCost(line);
 			getline(myfile, line);
 			gam1.setAgeRating(stoi(line));
 			Game* newG = new Game(gam1);
@@ -217,9 +217,20 @@ void Application::setGameIndex(int index)
 	this->gameIndex = index;
 }
 
+
 int Application::returnIndex()
 {
 	return gameIndex;
+}
+
+void Application::setGamesFound(vector<int> games)
+{
+	this->gamesFound = games;
+}
+
+vector<int> Application::returnGamesFound()
+{
+	return gamesFound;
 }
 
 

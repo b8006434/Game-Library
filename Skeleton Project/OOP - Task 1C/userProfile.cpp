@@ -39,7 +39,7 @@ bool userProfile::HandleChoice(char choice)
 // this puts '1' as 0, '2' as 1, '3' as 2, '4' as 3, etc.
 // this reverses the + 1 above and lets us do the range check below
 	int index = choice - '1';
-	if (choice == 'f' || 'F')
+	if (choice == 'F')
 		currentUser->addCredits(10.00);
 
 

@@ -9,7 +9,7 @@ gameMenu::gameMenu(const std::string& title, Application * app) : Menu(title, ap
 void gameMenu::OutputOptions()
 {
 
-	float gameCost = Utils::convertToFloat(games[gameIndex]->GetCost());;
+	float gameCost =games[gameIndex]->GetCost();;
 	string gameCostf = to_string(gameCost);
 	if (!app->IsUserLoggedIn())
 	{
@@ -34,10 +34,10 @@ void gameMenu::OutputOptions()
 
 bool gameMenu::HandleChoice(char choice)
 {
-	if (choice == 'p' || choice == 'P')
+	if (choice == 'P')
 	{
 		float usrCredits = app->GetCurrentUser()->getCredits();
-		float gameCost = Utils::convertToFloat(games[gameIndex]->GetCost());
+		float gameCost = games[gameIndex]->GetCost();
 
 		if (usrCredits > gameCost)
 		{

@@ -13,5 +13,6 @@ class Utils
 	static std::string convertToUpper(std::string text);
 	static vector<string> split(string s, string delimiter);
 	static float convertToFloat(int amount);
+	static bool startsWith(string fullText, string toSearch);
     // TODO: 2 versions of ToUpper
 };

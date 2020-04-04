@@ -12,6 +12,9 @@ void StoreMenu::OutputOptions()
 		// adding 1 so the display is nicer for the user
 		Option(i + 1, games[i]->GetName());
 	}
+	Line();
+	Line("SEARCH GAMES");
+	Option('s', "Search");
 }
 
 bool StoreMenu::HandleChoice(char choice)
@@ -21,6 +24,12 @@ bool StoreMenu::HandleChoice(char choice)
 	// this reverses the + 1 above and lets us do the range check below
 	int gameIndex = choice - '1';
 	app->setGameIndex(gameIndex);
+
+	if (choice == 'S')
+	{
+		searchMenu("SEARCH", app);
+	}
+
 	if (gameIndex >= 0 && gameIndex < games.length())
 	{
 			gameMenu g1(games[gameIndex]->GetName(), app);
@@ -29,6 +38,8 @@ bool StoreMenu::HandleChoice(char choice)
 	return false;
 
 }
+
+
 
 
 

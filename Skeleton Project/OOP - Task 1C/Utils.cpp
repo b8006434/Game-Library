@@ -4,7 +4,7 @@ std::string Utils::getLineFromUser()
 {
     std::string input;
     std::getline(std::cin, input);
-    return input;
+    return convertToUpper(input);
 }
 
 char Utils::getCharFromUser()
@@ -41,6 +41,15 @@ float Utils::convertToFloat(int amount)
 {
 
 	return 	amount / 100;
+}
+
+bool Utils::startsWith(string fullText, string toSearch)
+{
+	string cFullText = Utils::convertToUpper(fullText);
+	if (cFullText.find(toSearch) != std::string::npos) {
+		return true;
+	}
+	return false;
 }
 
 

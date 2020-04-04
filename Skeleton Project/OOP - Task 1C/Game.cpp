@@ -19,7 +19,12 @@ const std::string& Game::GetDescription() const
 	return description;
 }
 
-int Game::GetCost() const
+int Game::getID()
+{
+	return id;
+}
+
+float Game::GetCost() const
 {
 	return cost;
 }
@@ -34,9 +39,9 @@ void Game::setDescription(string description)
 	this->description = description;
 }
 
-void Game::setCost(int cost)
+void Game::setCost(string costf)
 {
-	this->cost = cost;
+	this->cost = stof(costf)/100;
 }
 
 void Game::setAgeRating(int ageRating)

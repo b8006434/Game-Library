@@ -29,6 +29,8 @@ class Application
 		void Save();
 		void setGameIndex(int index);
 		int returnIndex();
+		void setGamesFound(vector<int> games);
+		vector<int> returnGamesFound();
 	private:
 		Store store;
 		Account* currentAccount;
@@ -37,5 +39,5 @@ class Application
 		List<User*> users;
 		List<LibraryItem*> libraryItems;
 		int gameIndex;
-
+		vector<int> gamesFound;
 };
