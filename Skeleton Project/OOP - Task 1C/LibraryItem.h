@@ -5,9 +5,14 @@
 class LibraryItem
 {
 	public:
-		LibraryItem(const std::string&, Game*);
+		LibraryItem(const Date, Game*);
 		~LibraryItem();
+		const Game* returnGame();
+		void  setGame(Game* g);
+		void setDatePurchased(string date);
+		void setMinsPlayed(string minsPlayed);
 	private:
-		const Game *game;
-		const std::string purchased;  // TODO: replace with custom Date class, currently YYYY-MM-DD
+		const Game* game;
+		 Date purchased; 
+		int minsPlayed;
 };
